@@ -1,0 +1,248 @@
+[
+                {
+                    "id": 1,
+                    "name": "Createdon",
+                    "required": false,
+                    "type": "date"
+                },
+                {
+                    "id": 2,
+                    "name": "punchCloseAt",
+                    "required": false,
+                    "type": "timestamptz"
+                },
+                {
+                    "id": 3,
+                    "name": "OutageType",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 4,
+                    "name": "saifi",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 5,
+                    "name": "saidi",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 6,
+                    "name": "consumer_count_fdr5",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 7,
+                    "name": "outageSubType",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 8,
+                    "name": "initialoffreason",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 9,
+                    "name": "htclosingreason",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 10,
+                    "name": "fdr_Id",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 11,
+                    "name": "fdr_name",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 12,
+                    "name": "grid_name",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 13,
+                    "name": "Relay",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 14,
+                    "name": "isemergency",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 15,
+                    "name": "israintripping",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 16,
+                    "name": "TAT",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 17,
+                    "name": "duration",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 18,
+                    "name": "dts_Id",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 19,
+                    "name": "consumer_count_fdr18",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 20,
+                    "name": "datetime",
+                    "required": false,
+                    "type": "date"
+                },
+                {
+                    "id": 21,
+                    "name": "tempmax",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 22,
+                    "name": "tempmin",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 23,
+                    "name": "temp",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 24,
+                    "name": "dew",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 25,
+                    "name": "humidity",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 26,
+                    "name": "precip",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 27,
+                    "name": "precipprob",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 28,
+                    "name": "precipcover",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 29,
+                    "name": "preciptype",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 30,
+                    "name": "snow",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 31,
+                    "name": "snowdepth",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 32,
+                    "name": "windgust",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 33,
+                    "name": "windspeed",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 34,
+                    "name": "winddir",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 35,
+                    "name": "sealevelpressure",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 36,
+                    "name": "cloudcover",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 37,
+                    "name": "visibility",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 38,
+                    "name": "solarradiation",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 39,
+                    "name": "solarenergy",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 40,
+                    "name": "uvindex",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 41,
+                    "name": "severerisk",
+                    "required": false,
+                    "type": "int"
+                }
+]

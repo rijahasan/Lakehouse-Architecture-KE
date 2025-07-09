@@ -1,0 +1,498 @@
+"schemas": [
+        {
+            "type": "struct",
+            "schema-id": 0,
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "AccountContract",
+                    "required": false,
+                    "type": "decimal(20, 0)"
+                },
+                {
+                    "id": 2,
+                    "name": "Ticket No.",
+                    "required": false,
+                    "type": "long"
+                },
+                {
+                    "id": 3,
+                    "name": "Business_Partner",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 4,
+                    "name": "GUID",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 5,
+                    "name": "IBCName",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 6,
+                    "name": "PROCESS_TYPE",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 7,
+                    "name": "CREATED_BY",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 8,
+                    "name": "CREATED_AT",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 9,
+                    "name": "UDATETIME",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 10,
+                    "name": "LatestStatus",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 11,
+                    "name": "Supervisor",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 12,
+                    "name": "Lineman",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 13,
+                    "name": "MTLNo",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 14,
+                    "name": "CompletionRemarks",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 15,
+                    "name": "CompletedDateTime",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 16,
+                    "name": "ClosedDateTime",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 17,
+                    "name": "ClosedOnInteractionDateTime",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 18,
+                    "name": "InProcessDateTime",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 19,
+                    "name": "OpenDateTime",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 20,
+                    "name": "ForwardedToHTDateTime",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 21,
+                    "name": "HTDispatchedDateTime",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 22,
+                    "name": "Medium Of Complaint",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 23,
+                    "name": "IBCCode",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 24,
+                    "name": "CREATED_DATE",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 25,
+                    "name": "Source",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 26,
+                    "name": "Created By",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 27,
+                    "name": "Region",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 28,
+                    "name": "Subject_ID",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 29,
+                    "name": "Reason_ID",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 30,
+                    "name": "Key",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 31,
+                    "name": "Subject Group",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 32,
+                    "name": "Reason",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 33,
+                    "name": "Subject",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 34,
+                    "name": "GroundTATHrs",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 35,
+                    "name": "GroundTATNum",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 36,
+                    "name": "TimeElapsedCompleted",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 37,
+                    "name": "TimeElapsedClosed",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 38,
+                    "name": "O to I",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 39,
+                    "name": "I to C",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 40,
+                    "name": "ReOpenCountTemp",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 41,
+                    "name": "Year",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 42,
+                    "name": "Month",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 43,
+                    "name": "GroundTAT",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 44,
+                    "name": "TargetTAT",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 45,
+                    "name": "ReOpenCount",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 46,
+                    "name": "Closed Tag",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 47,
+                    "name": "%IntervalKey",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 48,
+                    "name": "TATBusted",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 49,
+                    "name": "SDR/Not SDR",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 50,
+                    "name": "TimeElapsedAtLastReload",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 51,
+                    "name": "Contract Account",
+                    "required": false,
+                    "type": "long"
+                },
+                {
+                    "id": 52,
+                    "name": "Contract",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 53,
+                    "name": "OIP",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 54,
+                    "name": "MNCcode",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 55,
+                    "name": "Postal Code",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 56,
+                    "name": "Billing Class",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 57,
+                    "name": "Cycle Day",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 58,
+                    "name": "Rate Category",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 59,
+                    "name": "Consumer Type",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 60,
+                    "name": "Customer Name",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 61,
+                    "name": "Customer Address",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 62,
+                    "name": "ConsumerStatus",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 63,
+                    "name": "PMT Count",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 64,
+                    "name": "Phase",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 65,
+                    "name": "PMT",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 66,
+                    "name": "PMT Name",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 67,
+                    "name": "Feeder ID",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 68,
+                    "name": "Feeder Name",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 69,
+                    "name": "Mobile Number",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 70,
+                    "name": "LandLine Number",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 71,
+                    "name": "Email Address",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 72,
+                    "name": "Remarks",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 73,
+                    "name": "StarCustomer",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 74,
+                    "name": "DueDate",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 75,
+                    "name": "IssueDate",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 76,
+                    "name": "Last Payment Amount",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 77,
+                    "name": "Last Payment Date",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 78,
+                    "name": "LastBillingMode",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 79,
+                    "name": "LastDCDate",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 80,
+                    "name": "LastDCRecovery",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 81,
+                    "name": "LastSIRCreatedOn",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 82,
+                    "name": "UnitBilled",
+                    "required": false,
+                    "type": "string"
+                }
+            ]

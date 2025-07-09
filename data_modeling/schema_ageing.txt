@@ -1,0 +1,1877 @@
+{
+                    "id": 1,
+                    "name": "AccountContract",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 2,
+                    "name": "Key Date",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 3,
+                    "name": "Business Partner",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 4,
+                    "name": "Legacy Account Number",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 5,
+                    "name": "Legacy Move In Date",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 6,
+                    "name": "Consumer Number",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 7,
+                    "name": "Contract Account",
+                    "required": false,
+                    "type": "long"
+                },
+                {
+                    "id": 8,
+                    "name": "Contract",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 9,
+                    "name": "Move-In Date",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 10,
+                    "name": "Move-Out Date",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 11,
+                    "name": "Billing Class",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 12,
+                    "name": "Rate Category",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 13,
+                    "name": "Region",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 14,
+                    "name": "IBC",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 15,
+                    "name": "IBCName",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 16,
+                    "name": "PIBC",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 17,
+                    "name": "DCIBC",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 18,
+                    "name": "DC OIP",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 19,
+                    "name": "DC Rate Category",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 20,
+                    "name": "CA Creation Date",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 21,
+                    "name": "Contract Creation Date",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 22,
+                    "name": "ConsumerCounter",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 23,
+                    "name": "Postal Code",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 24,
+                    "name": "OIP",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 25,
+                    "name": "Phase",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 26,
+                    "name": "Cycle Day",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 27,
+                    "name": "MRU",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 28,
+                    "name": "Sanctioned Load",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 29,
+                    "name": "Connected Load",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 30,
+                    "name": "Status",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 31,
+                    "name": "Last DC Date",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 32,
+                    "name": "Last DC Reason",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 33,
+                    "name": "Premise Type",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 34,
+                    "name": "Customer Name",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 35,
+                    "name": "PMT",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 36,
+                    "name": "Set Aside Amount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 37,
+                    "name": "Set Aside Code",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 38,
+                    "name": "Installement Number",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 39,
+                    "name": "Installement Amount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 40,
+                    "name": "PSC Location",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 41,
+                    "name": "PSC Classification",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 42,
+                    "name": "PSC Ministry",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 43,
+                    "name": "PSC Department",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 44,
+                    "name": "PSC Sub-Department",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 45,
+                    "name": "Schedule Number",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 46,
+                    "name": "PSC Consumer Region",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 47,
+                    "name": "Strategic/Non-Strategic",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 48,
+                    "name": "Consumer Type",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 49,
+                    "name": "PSC Consumer IBC",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 50,
+                    "name": "Industry Classification",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 51,
+                    "name": "Agency",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 52,
+                    "name": "Last Payment Date",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 53,
+                    "name": "Last Payment Amount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 54,
+                    "name": "Meter Number",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 55,
+                    "name": "Meter Make",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 56,
+                    "name": "Device Category",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 57,
+                    "name": "Last SIR Number",
+                    "required": false,
+                    "type": "long"
+                },
+                {
+                    "id": 58,
+                    "name": "Last SIR CreatedOn",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 59,
+                    "name": "BillingMonth",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 60,
+                    "name": "BillType",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 61,
+                    "name": "BCM",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 62,
+                    "name": "NormalUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 63,
+                    "name": "NormalAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 64,
+                    "name": "AverageUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 65,
+                    "name": "AverageAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 66,
+                    "name": "AdjustedUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 67,
+                    "name": "AdjustedAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 68,
+                    "name": "AssessedUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 69,
+                    "name": "AssessedAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 70,
+                    "name": "RegularUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 71,
+                    "name": "RegularAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 72,
+                    "name": "IRBDetectionUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 73,
+                    "name": "IRBDetectionAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 74,
+                    "name": "IRBRevisedUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 75,
+                    "name": "IRBRevisedAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 76,
+                    "name": "CurrentUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 77,
+                    "name": "CurrentAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 78,
+                    "name": "12MonthsAvgUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 79,
+                    "name": "12MonthsAvgAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 80,
+                    "name": "UnitBilledYTD",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 81,
+                    "name": "12MonthsUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 82,
+                    "name": "12MonthsAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 83,
+                    "name": "FICAMonth",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 84,
+                    "name": "OpeningBalance",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 85,
+                    "name": "MigrationBalance",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 86,
+                    "name": "AmountBilled",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 87,
+                    "name": "LPSBilled",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 88,
+                    "name": "LPSWaived",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 89,
+                    "name": "BankCharges",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 90,
+                    "name": "Payment",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 91,
+                    "name": "Adjustment",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 92,
+                    "name": "IBCTransfer",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 93,
+                    "name": "WriteOff",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 94,
+                    "name": "PreviousYearAllowance",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 95,
+                    "name": "DownPaymentRequest",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 96,
+                    "name": "DownPayment",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 97,
+                    "name": "ClearingAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 98,
+                    "name": "ClosingBalance",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 99,
+                    "name": "OutstandingDownPayment",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 100,
+                    "name": "SecurityDeposit",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 101,
+                    "name": "MNCVAdjustment",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 102,
+                    "name": "MNCVPayment",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 103,
+                    "name": "MNCVClearingAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 104,
+                    "name": "A <=(366)",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 105,
+                    "name": "B (365)-(1)",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 106,
+                    "name": "C 0-30",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 107,
+                    "name": "D 31-60",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 108,
+                    "name": "E 61-90",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 109,
+                    "name": "F 91-120",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 110,
+                    "name": "G 121-150",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 111,
+                    "name": "H 151-180",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 112,
+                    "name": "I 181-210",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 113,
+                    "name": "J 211-240",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 114,
+                    "name": "K 241-270",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 115,
+                    "name": "L 271-300",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 116,
+                    "name": "M 301-330",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 117,
+                    "name": "N 331-360",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 118,
+                    "name": "O 361-390",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 119,
+                    "name": "P 391-420",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 120,
+                    "name": "Q 421-450",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 121,
+                    "name": "R 451-480",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 122,
+                    "name": "S 481-510",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 123,
+                    "name": "T 511-540",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 124,
+                    "name": "U 541-570",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 125,
+                    "name": "V 571-600",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 126,
+                    "name": "W 601-630",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 127,
+                    "name": "X 631-660",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 128,
+                    "name": "Y 1021-1050",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 129,
+                    "name": "Y 1051-1080",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 130,
+                    "name": "Y 1081-1110",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 131,
+                    "name": "Y 1111-1140",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 132,
+                    "name": "Y 1141-1170",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 133,
+                    "name": "Y 1171-1200",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 134,
+                    "name": "Y 1201-1230",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 135,
+                    "name": "Y 1231-1260",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 136,
+                    "name": "Y 1261-1460",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 137,
+                    "name": "Y 1461-1825",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 138,
+                    "name": "Y 661-690",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 139,
+                    "name": "Y 691-720",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 140,
+                    "name": "Y 721-750",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 141,
+                    "name": "Y 751-780",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 142,
+                    "name": "Y 781-810",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 143,
+                    "name": "Y 811-840",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 144,
+                    "name": "Y 841-870",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 145,
+                    "name": "Y 871-900",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 146,
+                    "name": "Y 901-930",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 147,
+                    "name": "Y 931-960",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 148,
+                    "name": "Y 961-990",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 149,
+                    "name": "Y 991-1020",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 150,
+                    "name": "Z >=1826",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 151,
+                    "name": "GrossBilledYTD",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 152,
+                    "name": "NetCreditYTD",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 153,
+                    "name": "12MonthsGrossBilled",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 154,
+                    "name": "12MonthsNetCredit",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 155,
+                    "name": "12MonthsAvgGrossBilled",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 156,
+                    "name": "12MonthsAvgNetCredit",
+                    "required": false,
+                    "type": "double"
+                }
+            ]
+        },
+        {
+            "type": "struct",
+            "schema-id": 1,
+            "fields": [
+                {
+                    "id": 1,
+                    "name": "AccountContract",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 2,
+                    "name": "Key Date",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 3,
+                    "name": "Business Partner",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 4,
+                    "name": "Legacy Account Number",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 5,
+                    "name": "Legacy Move In Date",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 6,
+                    "name": "Consumer Number",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 7,
+                    "name": "Contract Account",
+                    "required": false,
+                    "type": "long"
+                },
+                {
+                    "id": 8,
+                    "name": "Contract",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 9,
+                    "name": "Move-In Date",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 10,
+                    "name": "Move-Out Date",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 11,
+                    "name": "Billing Class",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 12,
+                    "name": "Rate Category",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 13,
+                    "name": "Region",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 14,
+                    "name": "IBC",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 15,
+                    "name": "IBCName",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 16,
+                    "name": "PIBC",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 17,
+                    "name": "DCIBC",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 18,
+                    "name": "DC OIP",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 19,
+                    "name": "DC Rate Category",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 20,
+                    "name": "CA Creation Date",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 21,
+                    "name": "Contract Creation Date",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 22,
+                    "name": "ConsumerCounter",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 23,
+                    "name": "Postal Code",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 24,
+                    "name": "OIP",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 25,
+                    "name": "Phase",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 26,
+                    "name": "Cycle Day",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 27,
+                    "name": "MRU",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 28,
+                    "name": "Sanctioned Load",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 29,
+                    "name": "Connected Load",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 30,
+                    "name": "Status",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 31,
+                    "name": "Last DC Date",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 32,
+                    "name": "Last DC Reason",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 33,
+                    "name": "Premise Type",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 34,
+                    "name": "Customer Name",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 35,
+                    "name": "PMT",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 36,
+                    "name": "Set Aside Amount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 37,
+                    "name": "Set Aside Code",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 38,
+                    "name": "Installement Number",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 39,
+                    "name": "Installement Amount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 40,
+                    "name": "PSC Location",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 41,
+                    "name": "PSC Classification",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 42,
+                    "name": "PSC Ministry",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 43,
+                    "name": "PSC Department",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 44,
+                    "name": "PSC Sub-Department",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 45,
+                    "name": "Schedule Number",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 46,
+                    "name": "PSC Consumer Region",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 47,
+                    "name": "Strategic/Non-Strategic",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 48,
+                    "name": "Consumer Type",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 49,
+                    "name": "PSC Consumer IBC",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 50,
+                    "name": "Industry Classification",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 51,
+                    "name": "Agency",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 52,
+                    "name": "Last Payment Date",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 53,
+                    "name": "Last Payment Amount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 54,
+                    "name": "Meter Number",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 55,
+                    "name": "Meter Make",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 56,
+                    "name": "Device Category",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 57,
+                    "name": "Last SIR Number",
+                    "required": false,
+                    "type": "long"
+                },
+                {
+                    "id": 58,
+                    "name": "Last SIR CreatedOn",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 59,
+                    "name": "BillingMonth",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 60,
+                    "name": "BillType",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 61,
+                    "name": "BCM",
+                    "required": false,
+                    "type": "string"
+                },
+                {
+                    "id": 62,
+                    "name": "NormalUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 63,
+                    "name": "NormalAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 64,
+                    "name": "AverageUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 65,
+                    "name": "AverageAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 66,
+                    "name": "AdjustedUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 67,
+                    "name": "AdjustedAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 68,
+                    "name": "AssessedUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 69,
+                    "name": "AssessedAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 70,
+                    "name": "RegularUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 71,
+                    "name": "RegularAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 72,
+                    "name": "IRBDetectionUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 73,
+                    "name": "IRBDetectionAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 74,
+                    "name": "IRBRevisedUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 75,
+                    "name": "IRBRevisedAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 76,
+                    "name": "CurrentUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 77,
+                    "name": "CurrentAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 78,
+                    "name": "12MonthsAvgUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 79,
+                    "name": "12MonthsAvgAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 80,
+                    "name": "UnitBilledYTD",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 81,
+                    "name": "12MonthsUnits",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 82,
+                    "name": "12MonthsAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 83,
+                    "name": "FICAMonth",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 84,
+                    "name": "OpeningBalance",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 85,
+                    "name": "MigrationBalance",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 86,
+                    "name": "AmountBilled",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 87,
+                    "name": "LPSBilled",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 88,
+                    "name": "LPSWaived",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 89,
+                    "name": "BankCharges",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 90,
+                    "name": "Payment",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 91,
+                    "name": "Adjustment",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 92,
+                    "name": "IBCTransfer",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 93,
+                    "name": "WriteOff",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 94,
+                    "name": "PreviousYearAllowance",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 95,
+                    "name": "DownPaymentRequest",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 96,
+                    "name": "DownPayment",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 97,
+                    "name": "ClearingAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 98,
+                    "name": "ClosingBalance",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 99,
+                    "name": "OutstandingDownPayment",
+                    "required": false,
+                    "type": "int"
+                },
+                {
+                    "id": 100,
+                    "name": "SecurityDeposit",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 101,
+                    "name": "MNCVAdjustment",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 102,
+                    "name": "MNCVPayment",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 103,
+                    "name": "MNCVClearingAmount",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 104,
+                    "name": "A <=(366)",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 105,
+                    "name": "B (365)-(1)",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 106,
+                    "name": "C 0-30",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 107,
+                    "name": "D 31-60",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 108,
+                    "name": "E 61-90",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 109,
+                    "name": "F 91-120",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 110,
+                    "name": "G 121-150",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 111,
+                    "name": "H 151-180",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 112,
+                    "name": "I 181-210",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 113,
+                    "name": "J 211-240",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 114,
+                    "name": "K 241-270",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 115,
+                    "name": "L 271-300",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 116,
+                    "name": "M 301-330",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 117,
+                    "name": "N 331-360",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 118,
+                    "name": "O 361-390",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 119,
+                    "name": "P 391-420",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 120,
+                    "name": "Q 421-450",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 121,
+                    "name": "R 451-480",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 122,
+                    "name": "S 481-510",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 123,
+                    "name": "T 511-540",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 124,
+                    "name": "U 541-570",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 125,
+                    "name": "V 571-600",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 126,
+                    "name": "W 601-630",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 127,
+                    "name": "X 631-660",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 128,
+                    "name": "Y 1021-1050",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 129,
+                    "name": "Y 1051-1080",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 130,
+                    "name": "Y 1081-1110",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 131,
+                    "name": "Y 1111-1140",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 132,
+                    "name": "Y 1141-1170",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 133,
+                    "name": "Y 1171-1200",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 134,
+                    "name": "Y 1201-1230",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 135,
+                    "name": "Y 1231-1260",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 136,
+                    "name": "Y 1261-1460",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 137,
+                    "name": "Y 1461-1825",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 138,
+                    "name": "Y 661-690",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 139,
+                    "name": "Y 691-720",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 140,
+                    "name": "Y 721-750",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 141,
+                    "name": "Y 751-780",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 142,
+                    "name": "Y 781-810",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 143,
+                    "name": "Y 811-840",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 144,
+                    "name": "Y 841-870",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 145,
+                    "name": "Y 871-900",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 146,
+                    "name": "Y 901-930",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 147,
+                    "name": "Y 931-960",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 148,
+                    "name": "Y 961-990",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 149,
+                    "name": "Y 991-1020",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 150,
+                    "name": "Z >=1826",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 151,
+                    "name": "GrossBilledYTD",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 152,
+                    "name": "NetCreditYTD",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 153,
+                    "name": "12MonthsGrossBilled",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 154,
+                    "name": "12MonthsNetCredit",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 155,
+                    "name": "12MonthsAvgGrossBilled",
+                    "required": false,
+                    "type": "double"
+                },
+                {
+                    "id": 156,
+                    "name": "12MonthsAvgNetCredit",
+                    "required": false,
+                    "type": "double"

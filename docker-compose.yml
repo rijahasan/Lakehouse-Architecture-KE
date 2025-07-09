@@ -1,0 +1,300 @@
+services:
+
+  nessie:
+    image: ghcr.io/projectnessie/nessie
+    container_name: nessie
+    environment:
+      - nessie.version.store.type=JDBC2
+      - nessie.version.store.persist.jdbc.datasource=mysql
+      - quarkus.datasource.mysql.jdbc.url=jdbc:mysql://host.docker.internal:3306/nessie
+      - quarkus.datasource.mysql.username=root
+      - quarkus.datasource.mysql.password=rija
+      - QUARKUS_HTTP_PORT=19120
+      - QUARKUS_LOG_CONSOLE_FORMAT=%d{yyyy-MM-dd HH:mm:ss} %-5p [%c{1.}] (%t) %s%e%n
+      - QUARKUS_LOG_LEVEL=INFO
+    volumes:
+      - ./nessie-data:/nessie/data # Mount local directory to persist Nessie data
+    ports:
+      - "19120:19120" # Expose Nessie API port
+    networks:
+      intro-network:
+    restart: always # nessie:
+
+  # Minio Storage Server
+  minio:
+    image: minio/minio
+    container_name: minio
+    environment:
+      - MINIO_ROOT_USER=admin
+      - MINIO_ROOT_PASSWORD=password
+      - MINIO_DOMAIN=minio
+      - MINIO_REGION_NAME=us-east-1
+      - MINIO_REGION=us-east-1
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:9000/minio/health/live" ]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    volumes:
+      - ./minio-data:/data # For persistent Minio bucket data
+      - ./initial-data:/minio-data # For the data you want to copy to the seed bucket
+    entrypoint: >
+      /bin/sh -c " minio server /data --console-address ':9001' & sleep 5; mc alias set myminio http://localhost:9000 admin password; mc mb myminio/datalake; mc mb myminio/datalakehouse; mc mb myminio/warehouse; mc mb myminio/seed; mc ls myminio/seed || mc cp /minio-data/* myminio/seed/; tail -f /dev/null"
+    networks:
+      intro-network:
+
+        # spark:
+        #   platform: linux/x86_64
+        #   image: custom-spark:latest
+        #   deploy:
+        #     resources:
+        #       limits:
+        #         # cpus: '8'  # Allocate 8 CPUs
+        #         memory: 16G # Allocate 16GB RAM
+        #   ports:
+        #     - 8080:8080 # Master Web UI
+        #     - 7077:7077 # Master Port for job submissions
+        #     - 8081:8081 # Worker Web UI
+        #     - 4040-4045:4040-4045 # Additional Spark job UI ports for more jobs
+        #     - 18080:18080 # Spark History Server
+        #     - 8888:8888 # Jupyter Notebook
+        #     - "7337:7337" # Shuffle service port
+        #   environment:
+        #     - AWS_REGION=us-east-1
+        #     - AWS_ACCESS_KEY_ID=admin # Minio username
+        #     - AWS_SECRET_ACCESS_KEY=password # Minio password
+        #     - SPARK_MASTER_HOST=spark
+        #     - SPARK_MASTER_PORT=7077
+        #     - SPARK_MASTER_WEBUI_PORT=8080
+        #     - SPARK_WORKER_WEBUI_PORT=8081
+        #     - SPARK_HISTORY_OPTS=-Dspark.history.fs.logDirectory=/tmp/spark-events
+        #     - SPARK_HOME=/opt/spark # Set SPARK_HOME explicitly
+        #     - SPARK_SHUFFLE_SERVICE_PORT=7337
+        #     - JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+        #   volumes:
+        #     - ./notebook-seed:/workspace/seed-data # Volume for seeding data into the container
+        #     - "E:/KEData/Habib Data(Jan'23 till date):/mnt/HabibData" # Mount local directory to container
+        #     - "/mnt/inc_processed:/mnt/inc_processed"
+        #   container_name: spark
+        #   command: >
+        #     /bin/bash -c " /opt/spark/sbin/start-master.sh && \ /opt/spark/sbin/start-worker.sh spark://spark:7077 && \ mkdir -p /tmp/spark-events && \ start-history-server.sh && \ jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password='' --notebook-dir=/workspace/seed-data && \ tail -f /dev/null"
+        #   networks:
+        #     intro-network:
+
+  spark:
+    platform: linux/x86_64
+    image: custom-spark:latest
+    # deploy:
+    #   resources:
+    #     limits:
+    # cpus: '8'  # Allocate 8 CPUs
+    # memory: 8G # Allocate 16GB RAM
+    ports:
+      - 8080:8080 # Master Web UI
+      - 7077:7077 # Master Port for job submissions
+      - 8081:8081 # Worker Web UI
+      - 4040-4045:4040-4045 # Additional Spark job UI ports for more jobs
+      - 18080:18080 # Spark History Server
+      - 8888:8888 # Jupyter Notebook
+      - "7337:7337" # Shuffle service port
+    environment:
+      # - PATH=/usr/bin:/usr/local/bin:/opt/spark/bin:/usr/lib/jvm/java-11-openjdk-amd64/bin
+      - PYTHONUNBUFFERED=1
+      - AWS_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=admin # Minio username
+      - AWS_SECRET_ACCESS_KEY=password # Minio password
+      - SPARK_MASTER_HOST=spark
+      - SPARK_MASTER_PORT=7077
+      - SPARK_MASTER_WEBUI_PORT=8080
+      - SPARK_WORKER_WEBUI_PORT=8081
+      - SPARK_HISTORY_OPTS=-Dspark.history.fs.logDirectory=/tmp/spark-events
+      - SPARK_HOME=/opt/spark # Set SPARK_HOME explicitly
+      - SPARK_SHUFFLE_SERVICE_PORT=7337
+      - JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+    volumes:
+      - ./notebook-seed:/workspace/seed-data # Volume for seeding data into the container
+      - "./requirements.txt:/requirements.txt"
+      - "./notebook-seed/filewatcher.py:/filewatcher"
+      - "E:/KEData/Habib Data(Jan'23 till date):/mnt/HabibData" # Mount local directory to container
+      - "./notebook-seed/incremental_load.py:/incremental_load"
+      - "/mnt/inc_processed:/mnt/inc_processed" # Mount the signal directory
+    container_name: spark
+    # working_dir: /
+    command: >
+      /bin/bash -c "
+        pip install --upgrade pip --root-user-action=ignore && \
+        pip install -r /requirements.txt && \
+        python3 /filewatcher & \
+        /opt/spark/sbin/start-master.sh && \
+        /opt/spark/sbin/start-worker.sh spark://spark:7077 && \
+        mkdir -p /tmp/spark-events && \
+        start-history-server.sh && \
+        jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password='' --notebook-dir=/workspace/seed-data && \
+        tail -f /dev/null"
+    # command: >
+    #   /bin/bash -c "
+    #     pip install --upgrade pip --root-user-action=ignore && \
+    #     pip install -r /requirements.txt && \
+    #     python3 /filewatcher && \
+    #    /opt/spark/sbin/start-master.sh && \ /opt/spark/sbin/start-worker.sh spark://spark:7077 && \ mkdir -p /tmp/spark-events && \ start-history-server.sh && \ jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password='' --notebook-dir=/workspace/seed-data && \ tail -f /dev/null "
+    networks:
+      intro-network:
+
+        # file-watcher:
+        #   environment:
+        #     - PYTHONUNBUFFERED=1
+        #     - JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 # Ensure JAVA_HOME is set for Spark
+        #     - SPARK_HOME=/opt/spark # Specify Spark home
+        #     - SPARK_MASTER_HOST=spark # Point to the Spark master container
+        #     - SPARK_MASTER_PORT=7077 # Spark master port
+        #   image: python:3.9-slim
+        #   container_name: file-watcher
+        #   depends_on:
+        #     - spark # Ensure Spark container starts before file-watcher
+        #   volumes:
+        #     - "./requirements.txt:/requirements.txt"
+        #     - "./notebook-seed/filewatcher.py:/filewatcher"
+        #     - "E:/KEData/Habib Data(Jan'23 till date):/mnt/HabibData" # Mount local directory to container
+        #     - "./notebook-seed/incremental_load.py:/incremental_load"
+        #     - "/mnt/inc_processed:/mnt/inc_processed" # Mount the signal directory
+        #   working_dir: /
+        #   command: >
+        #     /bin/bash -c "
+        #       # Install necessary dependencies
+        #       pip install --upgrade pip --root-user-action=ignore && \
+        #       pip install -r /requirements.txt && \
+        #       pip install --upgrade pip --root-user-action=ignore && \ pip install -r /requirements.txt && \ 
+        #       python /filewatcher && \
+        #       /opt/spark/sbin/start-master.sh && \ /opt/spark/sbin/start-worker.sh spark://spark:7077 && \ mkdir -p /tmp/spark-events && \ start-history-server.sh && \ jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password='' --notebook-dir=/workspace/seed-data && \ tail -f /dev/null"
+        #   networks:
+        #     intro-network:
+        # restart: always  # Keep the container running
+
+        # file-watcher:
+        #   environment:
+        #     - PYTHONUNBUFFERED=1
+        #   image: python:3.9-slim
+        #   container_name: file-watcher
+        #   depends_on:
+        #     - spark
+        #   volumes:
+        #     - "./requirements.txt:/requirements.txt"
+        #     - "./notebook-seed/filewatcher.py:/filewatcher"
+        #     - "E:/KEData/Habib Data(Jan'23 till date):/mnt/HabibData" # Mount local directory to container
+        #     - "./notebook-seed/incremental_load.py:/incremental_load"
+        #     - "/mnt/inc_processed:/mnt/inc_processed"
+        #   working_dir: /
+        #   command: >
+        #     /bin/sh -c " pip install --upgrade pip --root-user-action=ignore && \ pip install -r /requirements.txt && \ python /filewatcher "
+        #   networks:
+        #     intro-network:
+        # ---------------------------spark old
+
+        # Spark
+        # spark:
+        # platform: linux/x86_64
+        # image: alexmerced/spark35nb:latest
+        # ports: 
+        #   - 8080:8080    # Master Web UI
+        #   - 7077:7077    # Master Port for job submissions
+        #   - 8081:8081    # Worker Web UI
+        #   - 4040-4045:4040-4045  # Additional Spark job UI ports for more jobs
+        #   - 18080:18080  # Spark History Server
+        #   - 8888:8888    # Jupyter Notebook
+        # environment:
+        #   - AWS_REGION=us-east-1
+        #   - AWS_ACCESS_KEY_ID=admin  # Minio username
+        #   - AWS_SECRET_ACCESS_KEY=password  # Minio password
+        #   - SPARK_MASTER_HOST=spark
+        #   - SPARK_MASTER_PORT=7077
+        #   - SPARK_MASTER_WEBUI_PORT=8080
+        #   - SPARK_WORKER_WEBUI_PORT=8081
+        #   - SPARK_HISTORY_OPTS=-Dspark.history.fs.logDirectory=/tmp/spark-events
+        #   - SPARK_HOME=/opt/spark  # Set SPARK_HOME explicitly
+        # volumes:
+        #   - ./notebook-seed:/workspace/seed-data  # Volume for seeding data into the container
+        #   - "/mnt/e/KEData/Habib Data(Jan'23 till date):/Habib Data(Jan'23 till date)"
+        # container_name: spark
+        # entrypoint: >
+        #   /bin/bash -c "
+        #   /opt/spark/sbin/start-master.sh && \
+        #   /opt/spark/sbin/start-worker.sh spark://localhost:7077 && \
+        #   mkdir -p /tmp/spark-events && \
+        #   start-history-server.sh && \
+        #   jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='' --NotebookApp.password='' && \
+        #   "
+        # ---------------------------spark old
+        # Dremio
+  dremio:
+    user: root
+    platform: linux/x86_64
+    image: dremio/dremio-oss:latest
+    mem_limit: 8g
+    ports:
+      - 32010:32010
+      - 31010:31010
+      - 9047:9047 #UI
+      - 45678:45678
+    container_name: dremio
+    volumes:
+      - ./dremio-data:/opt/dremio/data # Mount local folder to persist Dremio data
+      - ./dremio-env:/opt/dremio/conf/dremio-env
+    environment:
+      - DREMIO_JAVA_SERVER_EXTRA_OPTS=-Dpaths.dist=file:///opt/dremio/data/dist
+    networks:
+      intro-network:
+
+        # Apache Superset (New Service)
+  superset:
+    platform: linux/x86_64
+    image: apache/superset:latest
+    container_name: superset
+    environment:
+      - SUPERSET_SECRET_KEY=your-secret-key
+      # - DATABASE_URL=dremio://admin:admin@dremio:31010/your_catalog/your_schema
+      - DATABASE_URL=dremio+jdbc://mshoaibvohra:syedarija02@dremio:9047/nessie
+      # dremio+flight://dremio:9047/nessie
+      - REDIS_URL=redis://redis:6379/0
+      - export DREMIO_JDBC_DRIVER_CLASS=com.dremio.jdbc.Driver
+
+    ports:
+      - "8088:8088" # Expose Superset UI
+    depends_on:
+      - dremio # Ensure Superset starts after Dremio
+    networks:
+      intro-network:
+    volumes:
+      - ./superset_home:/app/superset_home # Mount volume for Superset data (e.g., dashboards, users)
+      # - ./superset_config.py:/app/app_superset/superset_config.py # Mount custom config file for Superset
+    entrypoint: >
+      /bin/bash -c " superset db upgrade &&  superset load_examples &&  superset init &&  superset run -h 0.0.0.0 -p 8088 --with-threads --reload --debugger"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8088" ]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+        # Mounting the new directory for signal files
+
+        # - ./dir:/watch-directory  
+        # - "/notebook-seed:/filewatcher"
+      # - "./notebook-seed/filewatcher.py:/filewatcher"
+      # - "/mnt/c/Users/syeda/Documents/GitHub/Lakehouse/notebook-seed:/filewatcher.py"
+      # - "/mnt/e/KEData/Habib\040Data(Jan'23\040till\040date):/mnt/HabibData"
+      # - "/mnt/e/KEData/Habib Data(Jan'23 till date):/mnt/HabibData"
+      # - "./notebook-seed/incremental_load.py:/incremental_load" 
+
+      # - "/mnt/e/KEData/Habib Data(Jan'23 till date):/Habib Data(Jan'23 till date)"
+      # ---------------------------filewatcher old
+
+networks:
+  intro-network:
+
+
+volumes:
+  minio-data: {}
+    # python -m venv /env && \
+    # /env/bin/pip install --upgrade pip --root-user-action=ignore && \
+    # /env/bin/pip install -r /requirements.txt && \
