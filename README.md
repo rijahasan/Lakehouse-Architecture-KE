@@ -1,4 +1,4 @@
-# Distributed Data Engineering Pipeline for Karachi Electric (Final Year Project)
+# Distributed Data Engineering for Karachi Electric (Final Year Project)
 
 ## Overview
 
