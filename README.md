@@ -1,8 +1,8 @@
-# Distributed Data Engineering for Karachi Electric (Final Year Project)
+# Distributed Data Engineering - Karachi Electric (Final Year Project)
 
 ## Overview
 
-This project was developed in collaboration with **Karachi Electric (KE)** as part of our Final Year Project at Habib University. The goal was to design and implement a **robust, scalable, and distributed data pipeline** capable of handling high-volume energy usage and operations data, enabling advanced analytics, operational insights, and data-backed decision-making.
+This project was developed in collaboration with **Karachi Electric (KE)** as part of our Final Year Project at Habib University. The goal was to design and implement a **robust, automated, scalable, and distributed data pipeline** capable of handling high-volume energy usage and operations data, enabling advanced analytics, operational insights, and data-backed decision-making. 
 
 ## Key Features
 
