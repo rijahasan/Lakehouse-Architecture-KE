@@ -1,0 +1,6 @@
+KPI_ID,Date_ID,Customer_ID,Product_ID,Agent_ID,Equipment_ID,Location_ID,Amount_Due,Amount_Paid,Days_Overdue,Interaction_Count,Resolution_Time,Satisfaction_Score,Fault_Count,Downtime_Duration,Maintenance_Cost
+1,20240301,101,201,301,401,501,500,400,10,3,24,4.5,2,5,150
+2,20240302,102,202,302,402,502,1000,800,5,5,36,3.8,1,2,200
+3,20240303,103,203,303,403,503,750,750,0,2,12,4.9,3,6,100
+4,20240304,104,204,304,404,504,1200,1000,15,4,48,3.5,2,3,250
+5,20240305,105,205,305,405,505,900,900,7,6,30,4.2,4,7,180
