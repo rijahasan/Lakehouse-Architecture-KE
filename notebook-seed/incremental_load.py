@@ -203,7 +203,7 @@ def main():
     if 4 <= int(billing_month[4:6]) <= 9:
         ageing_new_data = df_updated                              #for joins
         logging.info("Billing month has corresponding data in CRM from Apr-Sep")
-    #----------------------- crm consumer
+    #----------------------- crm consumer join
         logging.info("Appending Ageing x CRM consumer dim")
         crm_consumer_dim_ = spark.read.table("nessie.starschema.crm_consumer_dim")
         consumer_ageing_crm_dim = ageing_new_data.alias("ageing").join(
@@ -251,7 +251,7 @@ def main():
         timetaken = time.time()-starttime
         logging.info("Time taken to join with CRM Consumer dim and ingesting: %.2f seconds", timetaken)
         timedict["Joining with CRM Consumer dim and ingesting"] = timetaken
-    #----------------------- ageing x crm IBC
+    #----------------------- ageing x crm IBC join
         logging.info("Appending Ageing x CRM IBC dim - 33 IBCs")
         ibc_crm_dim_ = spark.read.table("nessie.starschema.ibc_crm_dim")
         ibc_crm_ageing_dim_33 = ageing_new_data.alias("ageing").join(
